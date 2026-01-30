@@ -18,20 +18,18 @@ async function getCourseData() {
 function showRamSchema(ramschema) {
     const scheduleListEl = document.querySelector("#ramschema");
 
+    scheduleListEl.innerHTML = "";
+
     //loopa
     ramschema.forEach(schema => {
         scheduleListEl.innerHTML += `
         <table>
             <tr>
-             <th>Kurskod</th>
-             <th>Kursnamn</th>
-             <th>Progression</th>
-             <th>Kursplan</th>
-             </tr>
-             <tr>
              <td>${schema.code}</td>
              <td>${schema.coursename}</td>
              <td>${schema.progression}</td>
-             <td>${schema.progression}</td>`
+             <td>${schema.syllabus}</td>
+             </tr>
+        </table>`
     })
 }
