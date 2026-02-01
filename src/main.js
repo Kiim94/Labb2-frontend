@@ -1,14 +1,17 @@
+"use strict";
 import './style.css'
 
 document.addEventListener("DOMContentLoaded", async () => {
     getCourseData();
 })
 
+let ramschema = [];
+
 async function getCourseData() {
     const url = "https://webbutveckling.miun.se/files/ramschema.json";
     try {
         const response = await fetch(url);
-        const ramschema = await response.json();
+        ramschema = await response.json();
         showRamSchema(ramschema);
     } catch (error) {
         console.error("Något gick fel: " + error);

@@ -27,6 +27,16 @@ footer{
     font-weight:bold;
     font-size:1rem;
 }
+
+input[type="text"]{
+    display:block;
+    margin:0 auto;
+    margin-bottom:1rem;
+    padding:0.5rem;
+    font-size:1rem;
+    width:100%;
+    max-width:400px;
+}
 table{
     width:100%;
     max-width:900px;
@@ -45,6 +55,13 @@ th, td{
 
 .table-section{
     overflow-x:auto;
+}
+#courseCode, #courseName, #courseProgress{
+    cursor: pointer;
+}
+
+#courseCode:hover, #courseName:hover, #courseProgress:hover{
+    color:darkkhaki;
 }
 h1{
     text-align:center;
