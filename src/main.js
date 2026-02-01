@@ -23,13 +23,11 @@ function showRamSchema(ramschema) {
     //loopa
     ramschema.forEach(schema => {
         scheduleListEl.innerHTML += `
-        <table>
             <tr>
              <td>${schema.code}</td>
              <td>${schema.coursename}</td>
              <td>${schema.progression}</td>
-             <td>${schema.syllabus}</td>
-             </tr>
-        </table>`
+             <td><a href="${schema.syllabus}" target="_blank">Kursplan</a></td>
+             </tr>`
     })
 }
