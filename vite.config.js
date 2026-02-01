@@ -8,10 +8,10 @@ export default defineConfig({
     //skriv vilket plugin som används
     plugins: [react(),
         ViteImageOptimizer({
-            png: {quality:80},
+            png: {quality:90},
             jpeg:{quality:90},
             webp:{quality: 70},
-            avif:{quality:80},
+            avif:{quality:70},
             svg: {
                 plugins:[
                     {name:"removeViewBox", active:false},
