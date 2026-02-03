@@ -25,18 +25,20 @@ function showRamSchema(ramschema) {
 
     //loopa
     ramschema.forEach(schema => {
-        scheduleListEl.innerHTML += `
-            <tr>
-             <td>${schema.code}</td>
-             <td>${schema.coursename}</td>
-             <td>${schema.progression}</td>
-             <td><a href="${schema.syllabus}" target="_blank">Kursplan</a></td>
-             </tr>`
+        scheduleListEl.innerHTML += 
+            "<tr>"+
+            "<td>" + schema.code + "</td>" +
+            "<td>" + schema.coursename + "</td>" +
+            "<td>" + schema.progression + "</td>" +
+            "<td>" + "<a href='" +schema.syllabus + "'>Kursplan</a></td>" +
+            "</tr>";
     })
 }
 
 //sortera vid klick på rubrik
 document.getElementById("courseCode").addEventListener("click", () =>{ 
+
+    //jämför: om den ena kommer före den andra i alfabetet
     ramschema.sort((a, b) => a.code.localeCompare(b.code));
         showRamSchema(ramschema);
 })

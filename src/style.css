@@ -84,9 +84,11 @@ h2{
     }
 }
 @media (max-width:450px){
+    html{
+        font-size:14px;
+    }
     footer{
         gap:0.7rem;
-        font-size:0.9rem;
     }
     
 }
