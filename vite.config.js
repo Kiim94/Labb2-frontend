@@ -24,8 +24,6 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "index.html"),
-                bilder: resolve(__dirname, "bilder.html"),
-                process: resolve(__dirname, "process.html"),
             }
         }
     }

@@ -52,3 +52,25 @@ document.getElementById("courseProgress").addEventListener("click", () => {
     ramschema.sort((a, b) => a.progression.localeCompare(b.progression));
     showRamSchema(ramschema);
 })
+
+
+//sökfunktion
+//keyup: när en tangent släpps börjar sökandet
+document.getElementById("search").addEventListener("keyup", () => {
+    const input = document.getElementById("search");
+
+    //gör alla bokstäver till små bokstäver - value = det som skrivs in i inpput
+    const searchWord = input.value.toLowerCase();
+
+    const tableRows = document.querySelectorAll("table tr");
+
+    //let i = 1 för att hoppa över raden med rubriker
+    for(let i = 1; i < tableRows.length; i++) {
+        //loopa igenom för att kolla om raden stämmer med input. Visa om ja, dölj om nej
+        if (tableRows[i].innerText.toLowerCase().includes(searchWord)){
+            tableRows[i].style.display = "";
+        } else {
+            tableRows[i].style.display = "none";
+        }
+    } 
+});
