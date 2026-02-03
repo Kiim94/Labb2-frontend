@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 export default defineConfig({
-    base: "/Labb1-frontend/",
+    base: "/Labb2-frontend/",
     //skriv vilket plugin som används
     plugins: [react(),
         ViteImageOptimizer({
